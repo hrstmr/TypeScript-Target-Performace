@@ -249,4 +249,10 @@ if ('make' in car === false) {
 }
 
 console.log(car.make);
+
 // Expected output: "Suzuki"
+const original = { name: 'MDN' } as any;
+original.itself = original;
+
+// Clone it
+const clone = structuredClone(original);

@@ -1,29 +1,3 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -32,33 +6,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
 };
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
@@ -71,118 +18,79 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-var _a, _b, _c;
+var _a, _b, _c, _d, _e, _f, _g;
+var _ClassWithPrivate_instances, _h, _ClassWithPrivate_privateFieldWithInitializer, _ClassWithPrivate_privateMethod, _ClassWithPrivate_privateStaticFieldWithInitializer, _ClassWithPrivate_privateStaticMethod;
 import { d1, d2, d3, d4, d5 } from './data';
-var world = 'world';
+const world = 'world';
 if ((_a = d1.tags) === null || _a === void 0 ? void 0 : _a.export_id) {
 }
 if ((_c = (_b = d1.tags) === null || _b === void 0 ? void 0 : _b.export_id) === null || _c === void 0 ? void 0 : _c.includes('8848c5d8-fd44-43c0-b7f2-1428d0f4891a')) {
 }
 d2.includes(8888);
-var _d3 = __assign({}, d3);
-var _d4 = __spreadArray([], __read(d4), false);
-var _d5 = d4.find(function (x) { return x === 5; });
-var name = 'Harshit';
-var message = "Hello ".concat(name);
-var str = "\nhello\nworld\n";
-var Shape = /** @class */ (function () {
-    function Shape() {
-    }
-    Shape.prototype.expand = function (n) {
+const _d3 = Object.assign({}, d3);
+const _d4 = [...d4];
+const _d5 = d4.find((x) => x === 5);
+const name = 'Harshit';
+const message = `Hello ${name}`;
+const str = `
+hello
+world
+`;
+class Shape {
+    constructor() { }
+    expand(n) {
         return n;
-    };
-    return Shape;
-}());
-var Circle = /** @class */ (function (_super) {
-    __extends(Circle, _super);
-    function Circle(radius) {
-        var _this = _super.call(this) || this;
-        _this.radius = radius;
-        return _this;
     }
-    Circle.prototype.getArea = function () {
+}
+class Circle extends Shape {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+    getArea() {
         return Math.PI * 2 * this.radius;
-    };
-    Circle.prototype.expand = function (n) {
-        return _super.prototype.expand.call(this, n) * Math.PI;
-    };
-    Circle.createFromDiameter = function (diameter) {
+    }
+    expand(n) {
+        return super.expand(n) * Math.PI;
+    }
+    static createFromDiameter(diameter) {
         return new Circle(diameter / 2);
-    };
-    return Circle;
-}(Shape));
-var map = new Map([[1, 2]]);
-var set = new Set([1, 2, 3]);
-var _d = __read(['Nikola', 'Tesla'], 2), first = _d[0], last = _d[1];
-var _e = {
+    }
+}
+const map = new Map([[1, 2]]);
+const set = new Set([1, 2, 3]);
+const [first, last] = ['Nikola', 'Tesla'];
+let { title, author } = {
     title: 'The Silkworm',
     author: 'R. Galbraith',
-}, title = _e.title, author = _e.author;
-var scores = [22, 33];
-var _f = __read(scores, 3), _g = _f[0], math = _g === void 0 ? 50 : _g, _h = _f[1], sci = _h === void 0 ? 50 : _h, _j = _f[2], arts = _j === void 0 ? 50 : _j;
-function greet1(_a) {
-    var _b = _a === void 0 ? {} : _a, _c = _b.name, name = _c === void 0 ? 'Rauno' : _c;
+};
+const scores = [22, 33];
+const [math = 50, sci = 50, arts = 50] = scores;
+function greet1({ name = 'Rauno' } = {}) { }
+function greet2({ name, greeting }) { }
+const { id } = d3, detail = __rest(d3, ["id"]);
+function printCoordinates({ left: x, top: y }) { }
+const options = Object.assign(Object.assign({}, d3), { visible: true });
+const users = [...d2, ...d4, 'rstacruz'];
+function hello(who = world) {
+    return `Hello ${who}! `;
 }
-function greet2(_a) {
-    var name = _a.name, greeting = _a.greeting;
-}
-var id = d3.id, detail = __rest(d3, ["id"]);
-function printCoordinates(_a) {
-    var x = _a.left, y = _a.top;
-}
-var options = __assign(__assign({}, d3), { visible: true });
-var users = __spreadArray(__spreadArray(__spreadArray([], __read(d2), false), __read(d4), false), ['rstacruz'], false);
-function hello(who) {
-    if (who === void 0) { who = world; }
-    return "Hello ".concat(who, "! ");
-}
-var fatArrow = function () {
+const fatArrow = () => {
     return 1;
 };
 // 2017
-var englishTitle = d5.title, // rename
-_k = __read(d5.translations, 1), localeTitle = _k[0].title;
+const { title: englishTitle, // rename
+translations: [{ title: localeTitle, // rename
+ },], } = d5;
 function foo() {
-    return __awaiter(this, void 0, void 0, function () {
-        var x;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, 1];
-                case 1:
-                    x = _a.sent();
-                    return [2 /*return*/, x + 1];
-            }
-        });
+    return __awaiter(this, void 0, void 0, function* () {
+        const x = yield 1;
+        return x + 1;
     });
 }
 // 2018
 function checkMail() {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
         if (Math.random() > 0.5) {
             resolve('Mail has arrived');
         }
@@ -192,29 +100,105 @@ function checkMail() {
     });
 }
 checkMail()
-    .then(function (mail) { })
-    .catch(function (err) { })
-    .finally(function () { });
+    .then((mail) => { })
+    .catch((err) => { })
+    .finally(() => { });
 // 2019
-var entries = new Map([
+const entries = new Map([
     ['foo', 69],
     ['bar', 420],
 ]);
-var obj = Object.fromEntries(entries);
+const obj = Object.fromEntries(entries);
 // Expected output: Object { foo: "bar", baz: 42 }
-var greeting = '   Hello world!   ';
+const greeting = '   Hello world!   ';
 greeting.trimStart();
 greeting.trimEnd();
 // Expected output: "Hello world!   ";
-var arr1 = [0, 1, 2, [3, 4]];
+const arr1 = [0, 1, 2, [3, 4]];
 // Expected output: Array [0, 1, 2, 3, 4]
-var arr2 = [1, 2, 1];
-var result = arr1.flatMap(function (num) { return (num === 2 ? [2, 2] : 1); });
+const arr2 = [1, 2, 1];
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
 // 2020
-var regexp = /t(e)(st(\d?))/g;
-var str1 = 'test1test2';
-var array = __spreadArray([], __read(str1.matchAll(regexp)), false);
+const regexp = /t(e)(st(\d?))/g;
+const str1 = 'test1test2';
+const array = [...str1.matchAll(regexp)];
 array[0];
 // Expected output: Array ["test1", "e", "st1", "1"]
 array[1];
 // Expected output: Array ["test2", "e", "st2", "2"]
+Promise.allSettled([
+    Promise.resolve(33),
+    new Promise((resolve) => resolve(66)),
+    99,
+    Promise.reject(new Error('an error')),
+]).then((values) => { });
+const adventurer = {
+    name: 'Alice',
+    cat: {
+        name: 'Dinah',
+    },
+};
+const dogName = (_d = adventurer.dog) === null || _d === void 0 ? void 0 : _d.name;
+dogName;
+// Expected output: undefined
+(_e = adventurer.someNonExistentMethod) === null || _e === void 0 ? void 0 : _e.call(adventurer);
+// Expected output: undefined
+const foo1 = null !== null && null !== void 0 ? null : 'default string';
+const baz1 = 0 !== null && 0 !== void 0 ? 0 : 42;
+const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+p.replaceAll('dog', 'monkey');
+// Expected output: "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+p.replaceAll(regex, 'ferret');
+// Expected output: "The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?"
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
+const promises = [promise1, promise2, promise3];
+Promise.any(promises).then((value) => console.log(value));
+// Expected output: "quick"
+const a = { duration: 50, title: '' };
+a.duration || (a.duration = 10);
+console.log(a.duration);
+// Expected output: 50
+a.title || (a.title = 'title is empty.');
+console.log(a.title);
+// Expected output: "title is empty"
+let a1 = 1;
+let b1 = 0;
+a1 && (a1 = 2);
+console.log(a1);
+// Expected output: 2
+b1 && (b1 = 2);
+console.log(b1);
+// Expected output: 0
+const a2 = { duration: 50 };
+(_f = a2.duration) !== null && _f !== void 0 ? _f : (a2.duration = 10);
+console.log(a2.duration);
+// Expected output: 50
+(_g = a2.speed) !== null && _g !== void 0 ? _g : (a2.speed = 25);
+console.log(a2.speed);
+// Expected output: 25
+let fee = 12300;
+class ClassWithPrivate {
+    constructor() {
+        _ClassWithPrivate_instances.add(this);
+        _ClassWithPrivate_privateFieldWithInitializer.set(this, 42);
+    }
+}
+_h = ClassWithPrivate, _ClassWithPrivate_privateFieldWithInitializer = new WeakMap(), _ClassWithPrivate_instances = new WeakSet(), _ClassWithPrivate_privateMethod = function _ClassWithPrivate_privateMethod() { }, _ClassWithPrivate_privateStaticMethod = function _ClassWithPrivate_privateStaticMethod() { };
+_ClassWithPrivate_privateStaticFieldWithInitializer = { value: 42 };
+const cart = ['apple', 'banana', 'pear'];
+const last1 = cart.at(1);
+const car = { make: 'Honda', model: 'Accord', year: 1998 };
+if ('make2' in car && typeof car.make2 === 'string') {
+    car.make2;
+}
+// Expected output: true
+delete car.make;
+if ('make' in car === false) {
+    car.make = 'Suzuki';
+}
+console.log(car.make);
+// Expected output: "Suzuki"
