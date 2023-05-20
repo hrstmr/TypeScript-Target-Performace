@@ -1,4 +1,4 @@
-import { d1, d2, d3, d4 } from './data';
+import { d1, d2, d3, d4, d5 } from './data';
 
 const world = 'world';
 
@@ -52,6 +52,8 @@ class Circle extends Shape {
 
 const map = new Map([[1, 2]]);
 
+const set = new Set([1, 2, 3]);
+
 const [first, last] = ['Nikola', 'Tesla'];
 let { title, author } = {
     title: 'The Silkworm',
@@ -77,3 +79,18 @@ function hello(who: string = world): string {
 const fatArrow = () => {
     return 1;
 };
+
+// 2017
+
+const {
+    title: englishTitle, // rename
+    translations: [
+        {
+            title: localeTitle, // rename
+        },
+    ],
+} = d5;
+async function foo() {
+    const x = await 1;
+    return x + 1;
+}
