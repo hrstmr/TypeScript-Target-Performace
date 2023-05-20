@@ -94,3 +94,20 @@ async function foo() {
     const x = await 1;
     return x + 1;
 }
+
+// 2018
+
+function checkMail() {
+    return new Promise((resolve, reject) => {
+        if (Math.random() > 0.5) {
+            resolve('Mail has arrived');
+        } else {
+            reject(new Error('Failed to arrive'));
+        }
+    });
+}
+
+checkMail()
+    .then((mail) => {})
+    .catch((err) => {})
+    .finally(() => {});

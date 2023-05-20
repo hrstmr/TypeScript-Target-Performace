@@ -163,3 +163,18 @@ function foo() {
         });
     });
 }
+// 2018
+function checkMail() {
+    return new Promise(function (resolve, reject) {
+        if (Math.random() > 0.5) {
+            resolve('Mail has arrived');
+        }
+        else {
+            reject(new Error('Failed to arrive'));
+        }
+    });
+}
+checkMail()
+    .then(function (mail) { })
+    .catch(function (err) { })
+    .finally(function () { });
