@@ -71,6 +71,22 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
 var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
         if (ar || !(i in from)) {
@@ -89,7 +105,7 @@ if ((_c = (_b = d1.tags) === null || _b === void 0 ? void 0 : _b.export_id) === 
 }
 d2.includes(8888);
 var _d3 = __assign({}, d3);
-var _d4 = __spreadArray([], d4, true);
+var _d4 = __spreadArray([], __read(d4), false);
 var _d5 = d4.find(function (x) { return x === 5; });
 var name = 'Harshit';
 var message = "Hello ".concat(name);
@@ -122,13 +138,13 @@ var Circle = /** @class */ (function (_super) {
 }(Shape));
 var map = new Map([[1, 2]]);
 var set = new Set([1, 2, 3]);
-var _d = ['Nikola', 'Tesla'], first = _d[0], last = _d[1];
+var _d = __read(['Nikola', 'Tesla'], 2), first = _d[0], last = _d[1];
 var _e = {
     title: 'The Silkworm',
     author: 'R. Galbraith',
 }, title = _e.title, author = _e.author;
 var scores = [22, 33];
-var _f = scores[0], math = _f === void 0 ? 50 : _f, _g = scores[1], sci = _g === void 0 ? 50 : _g, _h = scores[2], arts = _h === void 0 ? 50 : _h;
+var _f = __read(scores, 3), _g = _f[0], math = _g === void 0 ? 50 : _g, _h = _f[1], sci = _h === void 0 ? 50 : _h, _j = _f[2], arts = _j === void 0 ? 50 : _j;
 function greet1(_a) {
     var _b = _a === void 0 ? {} : _a, _c = _b.name, name = _c === void 0 ? 'Rauno' : _c;
 }
@@ -140,7 +156,7 @@ function printCoordinates(_a) {
     var x = _a.left, y = _a.top;
 }
 var options = __assign(__assign({}, d3), { visible: true });
-var users = __spreadArray(__spreadArray(__spreadArray([], d2, true), d4, true), ['rstacruz'], false);
+var users = __spreadArray(__spreadArray(__spreadArray([], __read(d2), false), __read(d4), false), ['rstacruz'], false);
 function hello(who) {
     if (who === void 0) { who = world; }
     return "Hello ".concat(who, "! ");
@@ -149,7 +165,8 @@ var fatArrow = function () {
     return 1;
 };
 // 2017
-var englishTitle = d5.title, localeTitle = d5.translations[0].title;
+var englishTitle = d5.title, // rename
+_k = __read(d5.translations, 1), localeTitle = _k[0].title;
 function foo() {
     return __awaiter(this, void 0, void 0, function () {
         var x;
@@ -178,3 +195,26 @@ checkMail()
     .then(function (mail) { })
     .catch(function (err) { })
     .finally(function () { });
+// 2019
+var entries = new Map([
+    ['foo', 69],
+    ['bar', 420],
+]);
+var obj = Object.fromEntries(entries);
+// Expected output: Object { foo: "bar", baz: 42 }
+var greeting = '   Hello world!   ';
+greeting.trimStart();
+greeting.trimEnd();
+// Expected output: "Hello world!   ";
+var arr1 = [0, 1, 2, [3, 4]];
+// Expected output: Array [0, 1, 2, 3, 4]
+var arr2 = [1, 2, 1];
+var result = arr1.flatMap(function (num) { return (num === 2 ? [2, 2] : 1); });
+// 2020
+var regexp = /t(e)(st(\d?))/g;
+var str1 = 'test1test2';
+var array = __spreadArray([], __read(str1.matchAll(regexp)), false);
+array[0];
+// Expected output: Array ["test1", "e", "st1", "1"]
+array[1];
+// Expected output: Array ["test2", "e", "st2", "2"]

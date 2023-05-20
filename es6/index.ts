@@ -111,3 +111,142 @@ checkMail()
     .then((mail) => {})
     .catch((err) => {})
     .finally(() => {});
+
+// 2019
+
+const entries = new Map([
+    ['foo', 69],
+    ['bar', 420],
+]);
+
+const obj = Object.fromEntries(entries);
+// Expected output: Object { foo: "bar", baz: 42 }
+
+const greeting = '   Hello world!   ';
+greeting.trimStart();
+greeting.trimEnd();
+// Expected output: "Hello world!   ";
+
+const arr1 = [0, 1, 2, [3, 4]];
+// Expected output: Array [0, 1, 2, 3, 4]
+
+const arr2 = [1, 2, 1];
+
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+// 2020
+const regexp = /t(e)(st(\d?))/g;
+const str1 = 'test1test2';
+
+const array = [...str1.matchAll(regexp)];
+
+array[0];
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+array[1];
+// Expected output: Array ["test2", "e", "st2", "2"]
+
+Promise.allSettled([
+    Promise.resolve(33),
+    new Promise((resolve) => resolve(66)),
+    99,
+    Promise.reject(new Error('an error')),
+]).then((values) => {});
+
+const adventurer = {
+    name: 'Alice',
+    cat: {
+        name: 'Dinah',
+    },
+} as any;
+
+const dogName = adventurer.dog?.name;
+dogName;
+// Expected output: undefined
+
+adventurer.someNonExistentMethod?.();
+// Expected output: undefined
+
+const foo1 = null ?? 'default string';
+
+const baz1 = 0 ?? 42;
+
+const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+p.replaceAll('dog', 'monkey');
+// Expected output: "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+p.replaceAll(regex, 'ferret');
+// Expected output: "The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?"
+
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+// Expected output: "quick"
+
+const a = { duration: 50, title: '' };
+
+a.duration ||= 10;
+console.log(a.duration);
+// Expected output: 50
+
+a.title ||= 'title is empty.';
+console.log(a.title);
+// Expected output: "title is empty"
+
+let a1 = 1;
+let b1 = 0;
+
+a1 &&= 2;
+console.log(a1);
+// Expected output: 2
+
+b1 &&= 2;
+console.log(b1);
+// Expected output: 0
+
+const a2 = { duration: 50 } as any;
+
+a2.duration ??= 10;
+console.log(a2.duration);
+// Expected output: 50
+
+a2.speed ??= 25;
+console.log(a2.speed);
+// Expected output: 25
+
+let fee = 123_00;
+
+class ClassWithPrivate {
+    #privateFieldWithInitializer = 42;
+
+    #privateMethod() {}
+
+    static #privateStaticFieldWithInitializer = 42;
+
+    static #privateStaticMethod() {}
+}
+
+const cart = ['apple', 'banana', 'pear'];
+const last1 = cart.at(1);
+
+const car = { make: 'Honda' as string | undefined, model: 'Accord', year: 1998 };
+
+if ('make2' in car && typeof car.make2 === 'string') {
+    car.make2;
+}
+// Expected output: true
+
+delete car.make;
+if ('make' in car === false) {
+    car.make = 'Suzuki';
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
