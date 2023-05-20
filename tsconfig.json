@@ -1,8 +1,8 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        // "target": "ES5",
-        "target": "ES2022",
+        "target": "ES5",
+        // "target": "ES2022",
         "lib": ["ES2016"],
         // "module": "CommonJS",
         "module": "ESNext",

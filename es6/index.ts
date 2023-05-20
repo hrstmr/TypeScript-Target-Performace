@@ -54,3 +54,5 @@ class Circle extends Shape {
         return new Circle(diameter / 2);
     }
 }
+
+const map = new Map([[1, 2]]);
