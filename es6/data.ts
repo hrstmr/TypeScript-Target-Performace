@@ -15,11 +15,12 @@ const _job = {
 
 export const d1: Partial<typeof _job> = _job;
 
-export let d2 = [] as any;
+export let d2 = [] as number[];
 for (let i = 0; i < 10000; i++) {
     d2.push(i);
 }
 export const d3 = {
+    id: '4b1733e7-c8e0-4fdd-a7f1-13d3ab725c92',
     updated_at: '2020-07-15T10:24:42.364000000Z',
     job_id: '4b1733e7-c8e0-4fdd-a7f1-13d3ab725c92',
     description: 'Job from our export',

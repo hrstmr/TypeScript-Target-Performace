@@ -2,11 +2,6 @@ import { d1, d2, d3, d4 } from './data';
 
 const world = 'world';
 
-// default argument
-function hello(who: string = world): string {
-    return `Hello ${who}! `;
-}
-
 if (d1.tags?.export_id) {
 }
 
@@ -56,3 +51,29 @@ class Circle extends Shape {
 }
 
 const map = new Map([[1, 2]]);
+
+const [first, last] = ['Nikola', 'Tesla'];
+let { title, author } = {
+    title: 'The Silkworm',
+    author: 'R. Galbraith',
+};
+const scores = [22, 33];
+const [math = 50, sci = 50, arts = 50] = scores;
+function greet1({ name = 'Rauno' } = {}) {}
+function greet2({ name, greeting }: { name: string; greeting: string }) {}
+
+const { id, ...detail } = d3;
+function printCoordinates({ left: x, top: y }: { left: string; top: string }) {}
+const options = {
+    ...d3,
+    visible: true,
+};
+const users = [...d2, ...d4, 'rstacruz'];
+
+function hello(who: string = world): string {
+    return `Hello ${who}! `;
+}
+
+const fatArrow = () => {
+    return 1;
+};
