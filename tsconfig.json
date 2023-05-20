@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES5",
+        // "target": "ES2022",
         "lib": ["ES2016"],
         "module": "CommonJS",
         "esModuleInterop": true,
@@ -10,3 +11,24 @@
         "skipLibCheck": true
     }
 }
+// {
+//     "compileOnSave": false,
+//     "compilerOptions": {
+//         "target": "es5",
+//         "module": "ESNext",
+//         "moduleResolution": "node",
+//         "sourceMap": true,
+//         "emitDecoratorMetadata": true,
+//         "experimentalDecorators": true,
+//         "lib": ["es2015", "ES2016", "dom", "esnext.asynciterable"],
+//         "resolveJsonModule": true,
+//         // "types": ["node", "jquery", "jest"],
+//         "jsx": "react",
+//         "strict": true,
+//         "noUncheckedIndexedAccess": true,
+//         "skipLibCheck": true
+//     },
+//     "angularCompilerOptions": {
+//         "enableI18nLegacyMessageIdFormat": false
+//     }
+// }

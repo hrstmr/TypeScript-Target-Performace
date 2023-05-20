@@ -1,5 +1,8 @@
 {
-  "devDependencies": {
-    "typescript": "^5.0.4"
-  }
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "tslib": "^2.5.2"
+    }
 }

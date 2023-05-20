@@ -11,5 +11,4 @@ function hello(who) {
 if ((_a = data_1.job.tags) === null || _a === void 0 ? void 0 : _a.export_id) {
 }
 if ((_c = (_b = data_1.job.tags) === null || _b === void 0 ? void 0 : _b.export_id) === null || _c === void 0 ? void 0 : _c.includes('8848c5d8-fd44-43c0-b7f2-1428d0f4891a')) {
-    // do nothing
 }
